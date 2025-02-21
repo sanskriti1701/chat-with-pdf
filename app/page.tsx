@@ -4,7 +4,7 @@ import {
   ServerCogIcon,
   ZapIcon
 } from "lucide-react";
-import { Button } from "../components/ui/button.tsx";
+import { Button } from "../components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -54,20 +54,20 @@ export default function Home() {
             <Link href="/dashboard">Get Started</Link>
           </Button>
         </div>
-          <div className="mx-auto max-w-7xl px-6 lg:px-8">
-            <Image alt="App screenshot" src="https://i.imgur.com/VciRSTI.jpeg" width={2432} height={1442} className="mb-[-0%] rounded-xl shadow-2xl ring-1 ring-gray-900/10" />
-          </div>
-          <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md: mt-24 lg: px-8">
-            <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 1g:max-w-none lg:grid-cols-3 lg: gap-x-8 lg: gap-y-16">
-              {features?.map((feature, index) => (
-                <div key={index} className="relative pl-9">
-                  <dt className="inline font-semibold text-gray-900"><feature.icon className="w-6 h-6 text-indigo-600 absolute left-1 top-1 h-5 w-5 text-indigo-600" /></dt>
-                  <dd>{feature?.description}</dd>
-                </div>
-              ))}
-            </dl>
-          </div>
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <Image alt="App screenshot" src="https://i.imgur.com/VciRSTI.jpeg" width={2432} height={1442} className="mb-[-0%] rounded-xl shadow-2xl ring-1 ring-gray-900/10" />
         </div>
+        <div className="mx-auto mt-16 max-w-7xl px-6 sm:mt-20 md: mt-24 lg: px-8">
+          <dl className="mx-auto grid max-w-2xl grid-cols-1 gap-x-6 gap-y-10 text-base leading-7 text-gray-600 sm:grid-cols-2 lg:mx-0 1g:max-w-none lg:grid-cols-3 lg: gap-x-8 lg: gap-y-16">
+            {features?.map((feature, index) => (
+              <div key={index} className="relative pl-9">
+                <dt className="inline font-semibold text-gray-900"><feature.icon className="w-6 h-6 text-indigo-600 absolute left-1 top-1 h-5 w-5 text-indigo-600" /></dt>
+                <dd>{feature?.description}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </div>
     </main>
 
   );
